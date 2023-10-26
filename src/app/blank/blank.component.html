@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="d-flex justify-content-between mb-4">
+    <p class="display-3">Users</p>
+    <a class="btn btn-info h-50" routerLink="/Signup">Create New User</a>
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">UserEmail</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of userList">
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.userName}}</td>
+                <td>{{user.userEmail}}</td>
+                <td>
+                    <a class="btn btn-info" [routerLink]="['user',user.id]">View</a>
+                </td>
+                <td>
+                    <a class="btn btn-info" [routerLink]="['user/edit',user.id]">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<router-outlet></router-outlet>

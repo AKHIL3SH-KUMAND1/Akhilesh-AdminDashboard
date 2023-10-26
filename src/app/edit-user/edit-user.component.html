@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center align-items-center mb-5">
+    <div class="card w-50">
+        <div class="card-body">
+            <div class="m-sm-3">
+                <form [formGroup]="userData">
+                    <div class="mb-3">
+                        <label class="form-label">Full name</label>
+                        <input formControlName="userName" class="form-control form-control-lg" type="text" name="name"
+                            placeholder="Enter your name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input formControlName="userEmail" class="form-control form-control-lg" type="email"
+                            name="email" placeholder="Enter your email" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input formControlName="password" class="form-control form-control-lg" type="password"
+                            name="password" placeholder="Enter password" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        <input formControlName="confirmPassword" class="form-control form-control-lg" type="password"
+                            name="password" placeholder="Confirm password" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="floatingTextarea">Description</label>
+                        <textarea formControlName="description" class="form-control" placeholder="About yourself"
+                            id="floatingTextarea"></textarea>
+                    </div>
+                    <div class="d-grid gap-2 my-3">
+                        <a class="btn btn-lg btn-primary" (click)="editUser()">Update</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

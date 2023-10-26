@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xl-6 col-xxl-5 d-flex">
+        <div class="w-100">
+            <div class="row">
+                <div class="col-sm-6">
+                    <app-card [cardContent]="card1"></app-card>
+                    <app-card [cardContent]="card3"></app-card>
+                </div>
+                <div class="col-sm-6">
+                    <app-card [cardContent]="card2"></app-card>
+                    <app-card [cardContent]="card4"></app-card>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-6 col-xxl-7">
+        <div class="card flex-fill w-100">
+            <div class="card-header">
+
+                <h5 class="card-title mb-0">Recent Movement</h5>
+            </div>
+            <div class="card-body py-3">
+                <div class="chart chart-sm">
+                    <app-chart></app-chart>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
